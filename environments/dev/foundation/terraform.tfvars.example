@@ -1,0 +1,13 @@
+aws_region = "ap-south-1"
+environment = "dev"
+vpc_cidr = "10.10.0.0/16"
+availability_zones = ["ap-south-1a", "ap-south-1b"]
+single_nat = true
+api_client_cidrs = ["<connected-runner-or-vpn-cidr>"]
+operator_role_arn = "<authorized-IAM-role-ARN>"
+kubernetes_version = "<supported-EKS-version>"
+addon_versions = {
+  vpc-cni = "<compatible-pinned-version>"
+  coredns = "<compatible-pinned-version>"
+  kube-proxy = "<compatible-pinned-version>"
+}
